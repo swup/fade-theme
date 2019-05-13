@@ -1,0 +1,8 @@
+.swup-transition-main {
+    opacity: 1;
+    transition: opacity .4s;
+}
+
+html.is-animating .swup-transition-main {
+    opacity: 0;
+}
