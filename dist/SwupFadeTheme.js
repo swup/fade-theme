@@ -215,6 +215,9 @@ var Theme = function () {
 			// save original and replace animationSelector option
 			this._originalAnimationSelectorOption = String(this.swup.options.animationSelector);
 			this.swup.options.animationSelector = '[class*="swup-transition-"]';
+
+			// add classes after each content replace
+			this.swup.on('contentReplaced', this._addClassNameToElement);
 		}
 	}, {
 		key: '_afterUnmount',
@@ -283,12 +286,11 @@ var Theme = function () {
 	}, {
 		key: 'addClassName',
 		value: function addClassName(selector, name) {
+			// save so it can be later removed
 			this._classNameAddedToElements.push({ selector: selector, name: name });
 
-			// save so it can be later removed
+			// add class the first time
 			this._addClassNameToElement();
-
-			this.swup.on('contentReplaced', this._addClassNameToElement);
 		}
 
 		// this is here so we can tell if plugin was created by extending this class
