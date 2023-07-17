@@ -1,6 +1,10 @@
+html {
+	--swup-fade-theme-duration: .4s;
+}
+
 html.is-changing .swup-transition-main {
 	opacity: 1;
-	transition: opacity var(--swup-fade-theme-duration, .4s);
+	transition: opacity var(--swup-fade-theme-duration);
 }
 
 html.is-animating .swup-transition-main {
