@@ -1,8 +1,8 @@
 import Theme from '@swup/theme';
 import styles from './index.css';
 
-export default class FadeTheme extends Theme {
-	name = 'FadeTheme';
+export default class SwupFadeTheme extends Theme {
+	name = 'SwupFadeTheme';
 
 	constructor(options) {
 		super();
