@@ -44,7 +44,7 @@ You can override the plugin's custom properties to fine-tweak the animation.
 These are the defaults:
 
 ```css
-html {
+body {
   --swup-fade-theme-duration: .4s;
 }
 ```
