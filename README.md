@@ -1,24 +1,25 @@
 # Swup Fade Theme
-Basic theme for fade in/out animation of the main container.
+
+A [swup](https://swup.js.org) theme for fade animations.
+
+Makes the content fade out when leaving, and fade in when entering.
 
 ## Installation
 
-This theme can be installed with npm
+Install the theme from npm and import it into your bundle.
 
 ```bash
 npm install @swup/fade-theme
 ```
 
-and included with import
-
-```javascript
+```js
 import SwupFadeTheme from '@swup/fade-theme';
 ```
 
-or included from the dist folder
+Or include the minified production file from a CDN:
 
 ```html
-<script src="./dist/SwupFadeTheme.js"></script>
+<script src="https://unpkg.com/@swup/fade-theme@2"></script>
 ```
 
 ## Usage
@@ -31,5 +32,19 @@ const swup = new Swup({
 });
 ```
 
-## mainElement Option
+## Options
+
+### mainElement
+
 Changes the selector of the elements to fade in/out. Defaults to `#swup`.
+
+## Customization
+
+You can override the plugin's custom properties to fine-tweak the animation.
+These are the defaults:
+
+```css
+html {
+  --swup-fade-theme-duration: .4s;
+}
+```
