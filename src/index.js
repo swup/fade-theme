@@ -4,17 +4,13 @@ import styles from './index.css';
 export default class SwupFadeTheme extends Theme {
 	name = 'SwupFadeTheme';
 
-	constructor(options) {
+	defaults = {
+		mainElement: '#swup'
+	};
+
+	constructor(options = {}) {
 		super();
-
-		const defaultOptions = {
-			mainElement: '#swup'
-		};
-
-		this.options = {
-			...defaultOptions,
-			...options
-		};
+		this.options = { ...this.defaults, ...options };
 	}
 
 	mount() {
