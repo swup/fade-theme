@@ -1,20 +1,16 @@
 import Theme from '@swup/theme';
 import styles from './index.css';
 
-export default class FadeTheme extends Theme {
-	name = 'FadeTheme';
+export default class SwupFadeTheme extends Theme {
+	name = 'SwupFadeTheme';
 
-	constructor(options) {
+	defaults = {
+		mainElement: '#swup'
+	};
+
+	constructor(options = {}) {
 		super();
-
-		const defaultOptions = {
-			mainElement: '#swup'
-		};
-
-		this.options = {
-			...defaultOptions,
-			...options
-		};
+		this.options = { ...this.defaults, ...options };
 	}
 
 	mount() {
