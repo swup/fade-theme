@@ -1,8 +1,8 @@
 {
   "name": "@swup/fade-theme",
   "amdName": "SwupFadeTheme",
-  "version": "2.0.0",
   "description": "A swup theme for fade animations",
+  "version": "2.0.1",
   "type": "module",
   "source": "src/index.js",
   "main": "./dist/index.cjs",
