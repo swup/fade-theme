@@ -45,6 +45,6 @@ These are the defaults:
 
 ```css
 body {
-  --swup-fade-theme-duration: .4s;
+  --swup-fade-theme-duration: 0.4s;
 }
 ```
